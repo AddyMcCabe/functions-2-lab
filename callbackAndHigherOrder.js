@@ -5,7 +5,14 @@
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-// CODE HERE
+function multiply(num1, num2, cb){
+  if(+num1 && +num2){
+    num1 = +num1
+    num2 = +num2
+    return cb(num1 * num2)
+  }
+}
+// console.log(multiply(5, 8))
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -13,7 +20,7 @@
 // CHECK YOUR ANSWER
 
 // multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
+//   console.log('The answer is ' + answer) 
 // })
 
 
@@ -35,7 +42,13 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// CODE HERE 
+function first(arr, cb){
+ return cb(arr[0])
+}
+
+
+
+
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -55,7 +68,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// CODE HERE
+function last(arr, cb){
+  return cb(arr[6])
+ }
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -77,7 +92,14 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-// CODE HERE 
+function contains(arr, name, cb){
+  if(arr.includes(name) === true){
+    cb(true)
+  } else {
+    cb(false)
+  }
+  }
+
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -231,4 +253,4 @@ var users = [
   to add any number to your favorite number!
 */
 
-// CODE HERE
+// CODE HERE//
