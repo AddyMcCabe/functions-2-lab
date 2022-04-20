@@ -121,7 +121,7 @@ const finalOrderTotals = orders.map(function(element, index, wholeArr){
   return (element.price * element.tax) + element.price
 })
 
-// console.log(finalOrderTotals)
+console.log(finalOrderTotals)
 
 
 
@@ -143,10 +143,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 
 const bobsPurchases = purchases.filter(function(element, index){
   return element.owner === 'Bob'
+}).reduce(function(acc, curr){
+  return acc + curr.price
 })
 
-const bobsTotal = bobsPurchases.reduce(function(acc, curr){
-  
-})
 
-console.log(bobsTotal)
+
+
+console.log(bobsPurchases)

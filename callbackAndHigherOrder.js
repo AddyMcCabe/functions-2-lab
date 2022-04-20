@@ -124,7 +124,19 @@ function contains(arr, name, cb){
   Hint: you can use a nested for loop to do this.
 */
 
-// CODE HERE
+function uniq(arr, cb){
+  for(let i = 0; i < arr.length; i++){
+    for(let x = i + 1; x < arr.length; x++){
+      if(arr[i] === arr[x]){
+        arr.splice(x, 1)
+        x--
+      }
+    }
+    
+  }   
+  cb(arr) 
+}
+
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -133,7 +145,7 @@ function contains(arr, name, cb){
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// CODE HERE
+uniq(names, (uniqArr) => console.log(`The new names array with all the duplicate items removed is ${uniqArr}`))
 
 
 
@@ -144,7 +156,9 @@ function contains(arr, name, cb){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
+function each(arr, cb){
+
+}
 
 
 /*
